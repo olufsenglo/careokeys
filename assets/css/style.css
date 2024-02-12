@@ -1,0 +1,235 @@
+/*@font-face {
+font-family: Berliana;
+src: url(/assets/fonts/Berliana\ Lovely.otf);
+}*/
+/* CSS VARIABLES */
+:root {
+    --header-height: 3.5rem;
+
+    /* Colors */
+    --first-color: #f2d41e;
+    --first-color-alt: #f2a81e;
+    --title-color: #fafafa;
+    --text-color: #a7abb4;
+    --white-color: #fff;
+    --body-color: #01000a;
+    --container-color: #182334;
+
+    /*  Fonts and Typography */
+    --text-font: "Poppins", sans-serif;
+    --title-font: "Ubuntu", sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* Font Weight */
+    --font-lighter: 300;
+    --font-light: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /* z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/* Responsive Typography */
+@media screen and (min-width: 968px) {
+    :root {
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+
+}
+
+/* BASE  */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--text-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--title-font);
+    line-height: 1.4;
+}
+
+ul {
+    list-style: none;
+    font-family: var(--title-font);
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--title-font);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* REUSABLE CSS CLASSES */
+.container {
+    max-width: 1024px;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+    font-size: var(--h1-font-size);
+    margin-bottom: 2.5rem;
+    font-family: var(--title-font);
+}
+
+.subtitle {
+    font-size: var(--smaller-font-size);
+    color: var(--first-color);
+    padding-left: 2rem;
+    position: relative;
+    display: flex;
+    margin-bottom: 1.3rem;
+}
+
+.subtitle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: var(--first-color);
+}
+
+.main {
+    overflow: hidden;
+}
+
+/* Header & Nav */
+.header {
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    border-bottom: 1px solid rgba(109, 109, 109, 0.4);
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--title-font);
+}
+
+.nav__logo,
+.nav__toggle {
+    color: var(--title-color);
+    display: inline-flex;
+}
+
+.nav__logo {
+    align-items: center;
+    column-gap: 0.25rem;
+    font-weight: var(--font-medium);
+    transform: 0.3s;
+}
+
+.nav__logo i {
+    font-size: 1.25rem;
+    color: var(--first-color);
+}
+
+.nav__toggle {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        background-color: rgba(0, 6, 15, 0.1);
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(96px);
+        -webkit-backdrop-filter: blur(96px);
+        transition: 0.3s;
+    }
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3rem;
+    padding-top: 9rem;
+}
+
+.nav__link {
+    color: var(--title-color);
+    font-size: var (--h2-font-size);
+    font-weight: var (--font-medium);
+    transition: 0.3s;
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+.nav__close {
+    font-size: 2rem;
+    color: var(--white-color);
+    position: absolute;
+    top: 1rem;
+    right: 1.15rem;
+    cursor: pointer;
+}
+
+.download__link {
+    font-size: var(--normal-font-size);
+    padding: 1rem 2rem;
+    background-color: var(--first-color);
+    border-radius: 50px;
+    color: var(--body-color);
+    transform: 0.3s;
+}
+
+.download__link:hover {
+    background-color: var(--first-color-alt);
+    color: var(--body-color);
+}
+
