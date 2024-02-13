@@ -30,3 +30,10 @@ function linkAction() {
 }
 navLink.forEach((link) => link.addEventListener("click", linkAction));
 
+const linkProduct = document.querySelectorAll(".product__item");
+
+// function activeProduct() {
+//     linkProduct.forEach((link) => link.classList.remove("active-product"));
+//     this.classList.add("active-product");
+// }
+// linkProduct.forEach((link) => link.addEventListener("click", activeProduct));

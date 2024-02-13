@@ -606,3 +606,54 @@ img {
     transition: 0.3s;
     cursor: pointer;
 }
+
+.product__item img {
+    width: 1.5rem;
+}
+
+.product__item span,
+.product__item img {
+    opacity: 0.3;
+    transition: 0.3s;
+}
+
+.product__item:hover {
+    background-color: var(--first-color);
+    color: var(--body-color);
+}
+
+.product__item:hover span,
+.product__item:hover img {
+    opacity: 1;
+}
+
+.product__item:hover img {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+.product__content {
+    grid-template-columns: 228px;
+    row-gap: 2.5rem;
+    justify-content: center;
+}
+
+.product__card {
+    margin-bottom: 0;
+}
+
+/* Active product */
+.active-product {
+    background-color: var(--first-color);
+}
+
+.active-product span {
+    color: var(--body-color);
+    opacity: 1;
+}
+
+.active-product img {
+    opacity: 1;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
