@@ -359,3 +359,236 @@ img {
 .about-card-icon:hover {
     background-color: var(--first-color-alt);
 }
+
+/* Brands Section */
+.brans__img {
+    width: 40px;
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+.brands__container {
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding-bottom: 2rem;
+}
+
+.brands__img:hover {
+    opacity: 1;
+}
+
+/* Why Section */
+.why__container {
+    background-color: var(--container-color);
+    padding: 1.5rem;
+}
+
+.why__description {
+    font-family: Berliana;
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+}
+
+.why__container span {
+    color: var(--first-color);
+}
+
+/* Popular Section */
+.popular {
+    margin-top: -13rem;
+    padding-bottom: 4rem;
+    padding-top: 16rem;
+    position: relative;
+}
+
+.popular-bg {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: -1;
+}
+
+.popular__container h2 {
+    text-align: center;
+}
+
+.popular__card {
+    background-color: var(--container-color);
+    border-radius: 25px;
+    padding: 2rem 1.5rem;
+    width: 238px;
+    margin-bottom: 3.5rem;
+}
+
+.car-name {
+    font-size: var(--h2-font-size);
+}
+
+.car-model {
+    font-size: var(--small-font-size);
+}
+
+.car-img {
+    height: 100px;
+    transition: 0.3s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.8rem;
+}
+
+.car-img:hover {
+    transform: translateX(15px);
+}
+
+.car__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.car__details span {
+    font-size: var(--smaller-font-size);
+    color: var(--title-color);
+    margin-top: 0.5rem;
+}
+
+.speed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.speed img {
+    width: 17px;
+    margin-right: 0.25rem;
+}
+
+.car-line {
+    width: 1px;
+    height: 12px;
+    background-color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.car__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;    
+}
+
+.buy-btn {
+    background-color: var(--first-color);
+    color: var(--body-color);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-weight: var(--font-semi-bold);
+    transition: 0.3s;
+    margin-right: 0.8rem;
+}
+
+.buy-btn:hover {
+    background-color: var(--first-color-alt);
+}
+
+.rent-btn {
+    color: var(--text-color);
+    font-weight: var(--font-semi-bold);
+    transition: 0.3s;
+    position: relative;
+}
+
+.rent-btn:before {
+    content: "";
+    position: absolute;
+    bottom: -0.15rem;
+    left: 0;
+    width: 75%;
+    height: 2px;
+    background-color: var(--first-color);
+    transition: 0.3s;
+}
+
+.rent-btn:hover::before {
+    width: 100%;
+    background-color: var(--first-color-alt);
+}
+
+/* Newsletter section */
+.newsletter__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem 2rem 2rem;
+}
+
+.newsletter__description {
+    margin-bottom: 1.5rem;
+}
+
+.newsletter__form {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.newsletter-input {
+    border: none;
+    outline: none;
+    padding: 1.1rem 1rem;
+    border-radius: 0.25rem;
+    width: 65%;
+    columns: var(--text-color);
+    font-family: var(--text-font);
+}
+
+.newsletter-btn {
+    padding: 0.75rem;
+    font-size: var(--normal-font-size);
+    border-radius: 0.25rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--first-color);
+    border: none;
+    font-family: var(--text-font);
+    font-weight: var(--font-semi-bold);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-btn:hover {
+    background-color: var(--first-color-alt);
+}
+
+/* Products section */
+.product__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--first-color);
+    text-align: center;
+    display: block;
+}
+
+.products h2 {
+    text-align: center;
+}
+
+.product__container {
+    padding-top: 1rem;
+}
+
+.product__filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    margin-bottom: 3.5rem;
+}
