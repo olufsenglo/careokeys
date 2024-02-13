@@ -657,3 +657,59 @@ img {
     filter: invert(100%);
     -webkit-filter: invert(100%);
 }
+
+/* Download Section */
+.app__container {
+    background-color: var(--container-color);
+}
+
+.app__img {
+    width: 70%;
+    position: relative;
+}
+
+.app__data h2 {
+    margin-bottom: 1.5rem;
+}
+
+.app__description {
+    margin-bottom: 2rem;
+}
+
+.ios-btn a, .android-btn a {
+    padding: .7rem 1.6rem;
+    color: var(--body-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.ios-btn a {
+    background-color: var(--first-color);
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.ios-btn a:hover {
+    background-color: var(--first-color-alt);
+}
+
+.android-btn a {
+    background-color: var(--title-color);
+    border-radius: 50px;
+}
+
+.android-btn a:hover {
+    background-color: var(--container-color);
+    color: var(--title-color);
+    border: 1px solid var(--title-color);
+}
+
+.ios-btn a img,
+.android-btn a img {
+    width: 30px;
+    margin-right: 0.5rem;
+}
